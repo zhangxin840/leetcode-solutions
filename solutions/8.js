@@ -35,5 +35,5 @@ var myAtoi = function(str) {
         result = sign * num < -2147483648 ? -2147483648 : sign * num;
     }
 
-    return result
+    return result;
 };
