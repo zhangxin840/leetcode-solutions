@@ -10,22 +10,6 @@
  * @return {number}
  */
 var maxDepth = function(root) {
-    var getNodeLevel = function(node, currentLevel) {
-        var leftLevel;
-        var rightLevel;
-        var result;
-
-        if (!node) {
-            result = currentLevel - 1;
-        } else {
-            leftLevel = getNodeLevel(node.left, currentLevel + 1);
-            rightLevel = getNodeLevel(node.right, currentLevel + 1);
-
-            result = leftLevel > rightLevel ? leftLevel : rightLevel;
-        }
-
-        return result;
-    };
-
-    return getNodeLevel(root, 1);
+    if(!root) return 0;
+    return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 };
