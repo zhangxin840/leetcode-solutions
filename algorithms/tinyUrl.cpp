@@ -1,3 +1,5 @@
+//http://www.geeksforgeeks.org/how-to-design-a-tiny-url-or-url-shortener/
+
 // Function to generate a short url from intger ID
 string idToShortURL(long int n)
 {
